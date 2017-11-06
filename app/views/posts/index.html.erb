@@ -3,12 +3,14 @@
 <table>
 
   <tr>
+    <th></th>
     <th>Message</th>
   </tr>
 
-  <% @posts.each do |post| %>
+  <% @posts.each.with_index(1) do |post, index| %>
 
     <tr>
+      <td><%= index %></td>
       <td><%= post.body %></td>
     </tr>
 
